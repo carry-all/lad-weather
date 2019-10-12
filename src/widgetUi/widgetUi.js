@@ -1,10 +1,11 @@
 import React from 'react';
+import './widgetUi.css';
 
 function WidgetUi(props) {
-    return <div>
+    return <>
         <p>City: {props.data.city}</p>
         <p>Temperature: {props.data.temp}</p>
-    </div>
+    </>
 }
 
 export default WidgetUi;

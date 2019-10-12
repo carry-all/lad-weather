@@ -4,10 +4,11 @@ function CitySelector(props) {
     const name = useRef();
 
     return <div>
-        <p>City: <input type="text" ref={name}/></p>
+        <p>City: <input type="text" ref={name}/>
         <input type="button" value="+" onClick={() => {
             props.callback(name.current.value);
         }}/>
+        </p>
     </div>
 }
 
