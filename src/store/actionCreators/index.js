@@ -4,3 +4,20 @@ export function setName(name) {
         name: name,
     }
 }
+
+export function loadName(name) {
+    return (dispatch) => {
+
+        dispatch({
+            type: 'NEW_NAME_REQUEST'
+        });
+
+        setTimeout(() => {
+            dispatch({
+                type: 'NEW_NAME_REQUEST_COMPLETE',
+                name: name,
+                }
+            )
+        }, 2000)
+    }
+}
