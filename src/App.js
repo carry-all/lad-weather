@@ -1,20 +1,20 @@
 import React, {} from 'react';
 import './App.css';
-import Hello from "./hello/hello";
+import store from './store/store';
+import {Provider} from 'react-redux';
+import Header from "./components/header/header";
+import Body from './components/userForm/userForm';
 
 function App() {
-    function jsonCopy(src) {
-        return JSON.parse(JSON.stringify(src));
-    }
-
     return (
         <div className="App">
+            <Provider store={store}>
 
-            <Hello/>
-
+                <Header />
+                <Body />
+            </Provider>
         </div>
     )
-        ;
 }
 
 export default App;
